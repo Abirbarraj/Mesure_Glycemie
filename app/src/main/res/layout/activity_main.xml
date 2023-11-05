@@ -1,53 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:background="@drawable/app_background"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="playfair_display"
         android:gravity="center"
         android:padding="30dp"
+        android:text="Mesure de niveau de glycemie"
         android:textColor="@color/red"
-        android:fontFamily="playfair_display"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="Mesure de niveau de glycemie"/>
+        android:textStyle="bold" />
+
     <TextView
-        android:id="@+id/tvjeune"
+        android:id="@+id/tvage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:layout_marginTop="20dp"
-        android:textSize="25sp"
-        android:text="Votre age : "/>
+        android:text="Votre age:"
+        android:textColor="@color/black"
+        android:textSize="25sp"/>
 
     <SeekBar
-        android:id="@+id/sbAg"
+        android:id="@+id/sbAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:max="120" />
 
     <TextView
-        android:id="@+id/tvAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:layout_marginTop="30dp"
-        android:textSize="25sp"
-        android:text="Est ce que vous jeunez ? "/>
+        android:text="Est ce que vous jeunez ? "
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
     <RadioGroup
+        android:id="@+id/rgJeune"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/rbtOui"
             android:layout_width="0dp"
@@ -57,6 +60,7 @@
             android:text="Oui"
             android:textColor="@color/black"
             android:textSize="20sp" />
+
         <RadioButton
             android:id="@+id/rbtnon"
             android:layout_width="0dp"
@@ -67,33 +71,32 @@
             android:textColor="@color/black"
             android:textSize="20sp" />
     </RadioGroup>
+
     <EditText
+        android:id="@+id/EdText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:textSize="25sp"
         android:hint="Valeur mesurée (en mmol/l)"
         android:inputType="numberDecimal"
-        />
+        android:textSize="25sp" />
+
     <Button
         android:id="@+id/btnConsulter"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:text="CONSULTER"
-        android:onClick="calculer"
-        android:textSize="18sp"
         android:textColor="@color/black"
-        android:backgroundcolor="@color/gray"
-        />
+        android:textSize="18sp" />
+
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="25sp"
         android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:hint="..."
-        />
+        android:textSize="25sp" />
 </LinearLayout>

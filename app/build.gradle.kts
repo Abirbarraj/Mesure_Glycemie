@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "com.example.mesure_glycemie"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.mesure_glycemie"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 30
         versionCode = 1
         versionName = "1.0"
 
